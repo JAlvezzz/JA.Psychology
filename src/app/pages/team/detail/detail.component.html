@@ -1,0 +1,48 @@
+<div class="container mt-5">
+
+    <div class="row col-lg-12 justify-content-center">
+        <h1>{{member.fullName}}</h1>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-lg-3">
+            <img src="assets/img/card_image.jpg" alt="Avatar" class="member-photo">
+        </div>
+        <div class="col-lg-9">
+            {{member.description}}
+        </div>
+    </div>
+
+    <div class="row mt-5 col-md-12">
+        <h2>Formação profissional</h2>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-lg-12">
+            <ul class="academic-path-bullet-point">
+                <li *ngFor="let path of member.academicPath">
+                    {{path}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row mt-5 col-md-12">
+        <h2>Sobre mim</h2>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-lg-12">
+            {{member.aboutMe}}
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-lg-12">
+            <a class="social-icon" href="#"><fa-icon [icon]="linkedInIcon" size="2x"></fa-icon></a>
+            <a class="social-icon" href="#"><fa-icon [icon]="facebookIcon" size="2x"></fa-icon></a>
+            <a class="social-icon" href="#"><fa-icon [icon]="instagramIcon" size="2x"></fa-icon></a>
+        </div>
+    </div>
+
+</div>

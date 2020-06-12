@@ -1,0 +1,94 @@
+@import 'vars.scss';
+
+.card-team {
+    // border: 1px red solid;
+}
+
+.card-team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+}
+
+
+// TESTING
+
+.container1 {
+    position: relative;
+    width: 100%;
+  }
+  
+  .image1 {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 75px;
+  }
+  
+  .overlay1 {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+  }
+  
+  .container1:hover .overlay1 {
+    bottom: 0;
+    height: 100%;
+    border-radius: 75px;
+  }
+  
+  .text1 {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+  // TESTING 2
+
+  .container2 {
+    // position: relative;
+    // width: 100%;
+  }
+  
+  .image2 {
+    opacity: 1;
+    // display: block;
+    width: 150px;
+    height: 150px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    border-radius: 50%;
+  }
+  
+  .middle2 {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .container2:hover .image2 {
+    opacity: 0.3;
+  }
+  
+  .container2:hover .middle2 {
+    opacity: 1;
+  }
+  

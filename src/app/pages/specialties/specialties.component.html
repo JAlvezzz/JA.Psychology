@@ -1,0 +1,103 @@
+<div class="container mt-5">
+
+    <section>
+
+        <h2 class="title mb-5">Áreas</h2>
+
+        <div class="row">
+          <div *ngFor="let spec of specialties" class="col-lg-3">
+            <div class="card-area">
+              <img src="assets/img/card_image.jpg" class="card-area-photo" />
+              <div class="card-area-content">
+                <p>{{spec.title}}</p>
+                <button class="btn btn-primary" (click)="details(spec.nameIdentifier)">Mais</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="row">
+          <div class="col-lg-3">
+            <div class="card-area">
+              <img src="assets/img/card_image.jpg" class="card-area-photo" />
+              <div class="card-area-content">
+                <p>Lorem ipsum 111</p>
+                <button class="btn btn-primary" (click)="details(1)">Mais</button>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-3">
+            <div class="card-area">
+              <img src="assets/img/card_image.jpg" class="card-area-photo" />
+              <div class="card-area-content">
+                <p>Lorem ipsum 222</p>
+                <button class="btn btn-primary">Mais</button>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-3">
+            <div class="card-area">
+              <img src="assets/img/card_image.jpg" class="card-area-photo" />
+              <div class="card-area-content">
+                <p>Lorem ipsum 333</p>
+                <button class="btn btn-primary">Mais</button>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-3">
+            <div class="card-area">
+              <img src="assets/img/card_image.jpg" class="card-area-photo" />
+              <div class="card-area-content">
+                <p>Lorem ipsum 444</p>
+                <button class="btn btn-primary">Mais</button>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-3">
+            <div class="card-area">
+              <img src="assets/img/card_image.jpg" class="card-area-photo" />
+              <div class="card-area-content">
+                <p>Lorem ipsum 555</p>
+                <button class="btn btn-primary">Mais</button>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-3">
+            <div class="card-area">
+              <img src="assets/img/card_image.jpg" class="card-area-photo" />
+              <div class="card-area-content">
+                <p>Lorem ipsum 666</p>
+                <button class="btn btn-primary">Mais</button>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-3">
+            <div class="card-area">
+              <img src="assets/img/card_image.jpg" class="card-area-photo" />
+              <div class="card-area-content">
+                <p>Lorem ipsum 777</p>
+                <button class="btn btn-primary">Mais</button>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-lg-3">
+            <div class="card-area">
+              <img src="assets/img/card_image.jpg" class="card-area-photo" />
+              <div class="card-area-content">
+                <p>Lorem ipsum 888</p>
+                <button class="btn btn-primary">Mais</button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+    
+      </section>
+
+</div>
