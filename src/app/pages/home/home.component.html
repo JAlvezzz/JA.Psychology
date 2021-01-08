@@ -1,65 +1,54 @@
 <div class="home-background pb-5">
 
-    <!-- <div class="carousel mt-5">
-        <ngb-carousel style="background-color: grey;" [interval]="2000" [showNavigationArrows]="false">
+    <!-- <div class="carousel mt-5"> -->
+        <ngb-carousel style="background-color: grey;" [interval]="2000" [showNavigationArrows]="true">
             <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-                <img src="assets/img/hd_sample1.jpg" class="carousel-photo" alt="Random first slide">
-            </div>
-            <div class="carousel-caption">
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </div>
-            </ng-template>
-            <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-                <img src="assets/img/hd_sample2.jpg" class="carousel-photo" alt="Random second slide">
-            </div>
-            <div class="carousel-caption">
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            </ng-template>
-        </ngb-carousel>
-    </div> -->
-
-    <div class="carousel mt-5">
-        <ngb-carousel style="background-color: grey;" [interval]="2000" [showNavigationArrows]="false">
-            <ng-template ngbSlide>
-            <div class="carousel-photo" [ngStyle]="{'background-image': 'url(../../../assets/img/hd_sample1.jpg)' }">
-            </div>
-            <div class="carousel-caption">
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </div>
-            </ng-template>
-            <ng-template ngbSlide>
-            <div class="carousel-photo" [ngStyle]="{'background-image': 'url(../../../assets/img/hd_sample2.jpg)' }">
-            </div>
-            <div class="carousel-caption">
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            </ng-template>
-            <ng-template ngbSlide>
-            <div class="carousel-photo" [ngStyle]="{'background-image': 'url(../../../assets/img/sample_3.jpg)' }">
-            </div>
-            <div class="carousel-caption">
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
+                <div class="carousel-photo" [ngStyle]="{'background-image': 'url(../../../assets/img/carousel-img/carousel_1.jpg)' }">
+                </div>
+                <div class="carousel-caption">
+                    <h3>Second slide label</h3>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                <div class="carousel-photo" [ngStyle]="{'background-image': 'url(../../../assets/img/carousel-img/carousel_2.jpg)' }">
+                </div>
+                <div class="carousel-caption">
+                    <h3>Second slide label</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                <div class="carousel-photo" [ngStyle]="{'background-image': 'url(../../../assets/img/carousel-img/carousel_3.jpg)' }">
+                </div>
+                <div class="carousel-caption">
+                    <h3>Second slide label</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
             </ng-template>
         </ngb-carousel>
-    </div>
 
-    <!-- <app-services></app-services> -->
-    <app-about-us></app-about-us>
+        <!-- <ngb-carousel *ngIf="images" [showNavigationArrows]="true">
+            <ng-template ngbSlide *ngFor="let image of images">
+              <div class="picsum-img-wrapper">
+                <img [src]="image" alt="Random slide">
+              </div>
+              <div class="carousel-caption">
+                <h3>No mouse navigation</h3>
+                <p>This carousel hides navigation arrows and indicators.</p>
+              </div>
+            </ng-template>
+          </ngb-carousel> -->
+
+    <!-- </div> -->
+
+
+
+    
     <app-team></app-team>
-    <app-specialties></app-specialties>
-    <app-prices></app-prices>
-    <app-partnerships></app-partnerships>
+    <app-services></app-services>
+    <app-interventions></app-interventions>
     <app-contacts></app-contacts>
-    <app-faq></app-faq>
 
 </div>
 

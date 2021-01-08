@@ -1,32 +1,46 @@
-<div class="container mt-5">
+<div class="container main-container">
     
     <section>
-        <div class="row">
-            <div class="col-lg-4">
-            <div class="text-center">
-                <!-- <img title="firstImage"  src="" /> -->
-                <fa-icon [icon]="icon" size="3x"></fa-icon>
-                <p class="card-title mt-3">Title</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt, risus in fringilla placerat, ex tortor gravida diam, eu vulputate nisi ante quis massa. Donec.</p>
+
+        <h2 class="title mb-4">Serviços</h2>
+        <div class="subtitle mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In condimentum metus at arcu facilisis viverra in imperdiet elit. Integer in ultrices neque, ac auctor libero</div>
+        
+        <div class="row justify-content-md-center">
+
+            <div *ngFor="let service of services" class="col-lg-4 service-card">
+                <div class="text-center">
+                    <fa-icon [icon]="service.icon" size="3x"></fa-icon>
+                    <p class="service-title mt-3">{{service.title}}</p>
+                    <p>{{service.description}}</p>
+                </div>
             </div>
+
+            <!-- <div class="col-lg-4">
+                <div class="text-center">
+                    <fa-icon [icon]="icon" size="3x"></fa-icon>
+                    <p class="card-title mt-3">Title</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt, risus in fringilla placerat, ex tortor gravida diam, eu vulputate nisi ante quis massa. Donec.</p>
+                </div>
             </div>
 
             <div class="col-lg-4">
-            <div class="text-center">
-                <fa-icon [icon]="icon" size="3x"></fa-icon>
-                <p class="card-title mt-3">Title</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt, risus in fringilla placerat, ex tortor gravida diam, eu vulputate nisi ante quis massa. Donec.</p>
-            </div>
+                <div class="text-center">
+                    <fa-icon [icon]="icon" size="3x"></fa-icon>
+                    <p class="card-title mt-3">Title</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt, risus in fringilla placerat, ex tortor gravida diam, eu vulputate nisi ante quis massa. Donec.</p>
+                </div>
             </div>
 
             <div class="col-lg-4">
-            <div class="text-center">
-                <fa-icon [icon]="icon" size="3x"></fa-icon>
-                <p class="card-title mt-3">Title</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt, risus in fringilla placerat, ex tortor gravida diam, eu vulputate nisi ante quis massa. Donec.</p>
-            </div>
-            </div>
+                <div class="text-center">
+                    <fa-icon [icon]="icon" size="3x"></fa-icon>
+                    <p class="card-title mt-3">Title</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt, risus in fringilla placerat, ex tortor gravida diam, eu vulputate nisi ante quis massa. Donec.</p>
+                </div>
+            </div> -->
+
         </div>
+        
     </section>
 
 </div>

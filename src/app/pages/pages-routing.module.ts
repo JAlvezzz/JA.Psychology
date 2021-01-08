@@ -7,13 +7,13 @@ const routes: Routes = [
     path: '',
     component: PagesComponent,
     children: [
-      // {
-      //   path: 'servicos',
-      //   loadChildren: () => import('./services/services.module').then(m => m.ServicesModule)
-      // },
+      {
+        path: 'servicos',
+        loadChildren: () => import('./services/services.module').then(m => m.ServicesModule)
+      },
       {
         path: 'intervencoes',
-        loadChildren: () => import('./specialties/specialties.module').then(m => m.SpecialtiesModule)
+        loadChildren: () => import('./interventions/interventions.module').then(m => m.InterventionsModule)
       },
       {
         path: 'sobre-nos',
@@ -26,10 +26,6 @@ const routes: Routes = [
       {
         path: 'precos',
         loadChildren: () => import('./prices/prices.module').then(m => m.PricesModule)
-      },
-      {
-        path: 'parcerias',
-        loadChildren: () => import('./partnerships/partnerships.module').then(m => m.PartnershipsModule)
       },
       {
         path: 'contactos',

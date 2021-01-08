@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Specialty } from 'src/app/shared/models/specialty';
+import { SubIntervention } from 'src/app/shared/models/sub-intervention';
 
 @Component({
   selector: 'app-detail',
@@ -9,13 +9,13 @@ import { Specialty } from 'src/app/shared/models/specialty';
 })
 export class DetailComponent implements OnInit {
 
-  public specialty = new Specialty();
+  public subInterventions = new Array<SubIntervention>();
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.data.subscribe(res => {
-      this.specialty = res.specialty;
+      this.subInterventions = res.result;
     });
   }
 

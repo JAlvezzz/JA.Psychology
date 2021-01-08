@@ -4,7 +4,7 @@
     top: 0;
     width: 100%;
     background-color: white;
-    z-index: 99999; // 1 isn't sufficient becausa leaflet map...
+    z-index: 99999; // 1 isn't sufficient because leaflet map...
 }
 
 .navbar-brand {
@@ -13,6 +13,11 @@
 
 .nav-item {
     margin: 0rem 0.8rem;
+}
+
+.nav-item:hover {
+    // margin: 0rem 0.8rem;
+    background-color: #fcf9eb;
 }
 
 .nav-link {

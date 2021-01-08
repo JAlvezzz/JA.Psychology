@@ -17,15 +17,48 @@
 }
 
 body {
-    background-color: #F9F9F9;
-    // background-color: grey;
+    background-color: #fcf9eb;
 }
 
 .title {
     color: $primary-color;
+    font-size: 2rem;
 }
 
-// .bg-container {
-//     background-color: white;
-// }
+.subtitle {
+    font-size: 0.9rem;
+}
 
+.main-container {
+    background-color: white;
+    padding: 2rem;
+    margin-top: 2.5rem;
+}
+
+.btn {
+   padding: 0.5rem 1.5rem;
+   font-size: 0.9rem;
+   border-radius: 3px;
+}
+
+.btn-primary-color {
+    color: white;
+    background-color: $primary-color;
+}
+
+.btn-primary-color:hover {
+    color: white;
+    background-color: $primary-color-light;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.primary-color {
+    color: $primary-color;
+}

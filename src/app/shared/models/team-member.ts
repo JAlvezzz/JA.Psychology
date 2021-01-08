@@ -3,6 +3,7 @@ export class TeamMember {
     nameIdentifier: string;
     fullName: string;
     role: string;
+    workerRole: string;
     description: string;
     photo: string;
     academicPath: string[];
@@ -10,4 +11,6 @@ export class TeamMember {
     linkedIn: string;
     facebook: string;
     instagram: string;
+    phone: string;
+    email: string;
 }

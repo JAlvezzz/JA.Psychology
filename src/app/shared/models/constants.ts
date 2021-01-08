@@ -4,14 +4,6 @@ import { Injectable } from '@angular/core';
 export class Constants {
 
     public menuItems = [
-      // {
-      //   title: 'Services',
-      //   route: '/servicos'
-      // },
-      // {
-      //   title: 'team',
-      //   route: '/equipa'
-      // },
       {
         title: 'whoWeAre',
         // route: '/quem-somos',
@@ -27,16 +19,16 @@ export class Constants {
         ]
       },
       {
-        title: 'specialties',
+        title: 'interventions',
         route: '/intervencoes'
+      },
+      {
+        title: 'services',
+        route: '/servicos'
       },
       {
         title: 'prices',
         route: '/precos'
-      },
-      {
-        title: 'partnerships',
-        route: '/parcerias'
       },
       {
         title: 'contacts',

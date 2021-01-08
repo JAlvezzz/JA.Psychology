@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import * as L from 'leaflet';
+import { TeamMember } from 'src/app/shared/models/team-member';
+import { GeneralService } from 'src/app/shared/services/general.service';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-contacts',
@@ -41,7 +44,12 @@ export class ContactsComponent implements OnInit {
 
   title = 'ContactsComponent - Title';
 
-  constructor(private titleService: Title, private metaService: Meta) { }
+  public teamContacts = new Array<TeamMember>();
+
+  public phoneIcon = faPhone;
+  public mailIcon = faEnvelope;
+  
+  constructor(private titleService: Title, private metaService: Meta,  private generalService: GeneralService) { }
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
@@ -49,6 +57,8 @@ export class ContactsComponent implements OnInit {
       { name: 'keywords', content: 'Angular-Demo - content' },
       { name: 'description', content: 'Angular-Demo - description' }
     ]);
+
+    this.teamContacts = this.generalService.getTeamMemberContacts();
   }
 
 }

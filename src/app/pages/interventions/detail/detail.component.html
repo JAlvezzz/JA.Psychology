@@ -1,0 +1,31 @@
+<div class="container main-container">
+
+    <div *ngFor="let sub of subInterventions">
+
+        <div class="row col-lg-12 justify-content-center pb-4">
+            <h1 class="title">{{sub.title}}</h1>
+        </div>
+    
+        <section class="pb-4">
+            <p>{{sub.description}}</p>
+        </section>
+    
+        <section>
+            Prós
+            <ul>
+                <li *ngFor="let bullet1 of sub.bulletPoints1">{{bullet1}}</li>
+            </ul>
+        </section>
+    
+        <section>
+            Contras
+            <ul>
+                <li *ngFor="let bullet2 of sub.bulletPoints2">{{bullet2}}</li>
+            </ul>
+        </section>
+
+        <hr>
+
+    </div>
+    
+</div>

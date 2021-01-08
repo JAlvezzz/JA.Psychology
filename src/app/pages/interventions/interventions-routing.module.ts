@@ -1,23 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SpecialtiesComponent } from './specialties.component';
+import { InterventionsComponent } from './interventions.component';
 import { DetailComponent } from './detail/detail.component';
-import { SpecialtiesResolver } from 'src/app/shared/resolvers/specialties-resolver';
+import { InterventionResolver } from 'src/app/shared/resolvers/intervention-resolver';
 
 const routes: Routes = [
   {
     path: 'intervencoes',
-    component: SpecialtiesComponent,
+    component: InterventionsComponent,
   },
   {
     path: '',
-    component: SpecialtiesComponent,
+    component: InterventionsComponent,
   },
   {
-    path: ':id',
+    path: ':nameIdentifier',
     component: DetailComponent,
     resolve: {
-      specialty: SpecialtiesResolver
+      result: InterventionResolver
     }
   },
 ];
@@ -26,4 +26,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class SpecialtiesRoutingModule { }
+export class InterventionsRoutingModule { }

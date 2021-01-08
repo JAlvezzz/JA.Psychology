@@ -4,13 +4,13 @@ import { Observable } from 'rxjs';
 import { GeneralService } from '../services/general.service';
 
 @Injectable()
-export class SpecialtiesResolver implements Resolve<Observable<any>> {
+export class ServiceResolver implements Resolve<Observable<any>> {
 
   constructor(private generalService: GeneralService) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
-    const id = route.params.id;
-    return this.generalService.getSpecialtiesDetails(id);
+    const serviceName = route.params.nameIdentifier;
+    return this.generalService.getSubServices(serviceName);
   }
 
 }

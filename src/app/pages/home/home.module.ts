@@ -4,24 +4,22 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { ServicesComponent } from '../services/services.component';
-import { SpecialtiesComponent } from '../specialties/specialties.component';
+import { InterventionsComponent } from '../interventions/interventions.component';
 import { TeamComponent } from '../team/team.component';
 import { ContactsComponent } from '../contacts/contacts.component';
 import { AboutUsComponent } from '../about-us/about-us.component';
 import { PricesComponent } from '../prices/prices.component';
-import { PartnershipsComponent } from '../partnerships/partnerships.component';
 import { FaqComponent } from '../faq/faq.component';
 
 @NgModule({
     declarations: [
       HomeComponent,
       ServicesComponent,
-      SpecialtiesComponent,
+      InterventionsComponent,
       TeamComponent,
       ContactsComponent,
       AboutUsComponent,
       PricesComponent,
-      PartnershipsComponent,
       FaqComponent
     ],
     imports: [

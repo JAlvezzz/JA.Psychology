@@ -1,7 +1,9 @@
-<div class="container mt-5">
+<div class="container main-container">
     
     <section>
-        <h2 class="title mb-5">Equipa</h2>
+        <div class="title mb-4">Equipa</div>
+        <div class="subtitle mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In condimentum metus at arcu facilisis viverra in imperdiet elit. Integer in ultrices neque, ac auctor libero</div>
+        
         <div class="row">
           <!-- <div *ngFor="let tb of teamMembers" class="col-lg-4 card-team text-center">
             <img src="assets/img/sample_1.jpg" class="card-team-photo" (click)="details(tb.nameIdentifier)"/>
@@ -13,10 +15,12 @@
             <div class="container2">
               <img src="assets/img/sample_1.jpg" alt="Avatar" class="image2">
               <div class="card-team-info mt-3">
-                <span>{{tb.fullName}}</span>
+                <span class="d-block team-member-name">{{tb.fullName}}</span>
+                <div class="d-block team-member-separator"></div>
+                <span class="d-block">{{tb.role}}</span>
               </div>
               <div class="middle2">
-                  <button class="btn btn-success" (click)="details(tb.nameIdentifier)">Ver mais</button>
+                  <button class="btn btn-primary-color" (click)="details(tb.nameIdentifier)">Ver mais</button>
               </div>
             </div>
           </div>
