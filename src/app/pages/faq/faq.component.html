@@ -2,6 +2,11 @@
 
     <h2 class="title mb-5">Perguntas frequentes</h2>
 
+    <!-- <button (click)="isCollapsed = !isCollapsed">Toggle</button>
+    <p [@smoothCollapse]="isCollapsed?'initial':'final'">
+        your data here
+    </p> -->
+
     <!-- <div class="accordion" id="accordion">
         <div class="card">
           <div class="card-header" id="headingOne">
@@ -48,7 +53,7 @@
         </div>
       </div> -->
 
-      <ngb-accordion [closeOthers]="true">
+      <ngb-accordion animation="true" [closeOthers]="true">
       <!-- <ngb-accordion [closeOthers]="true" activeIds="static-1"> -->
         <ngb-panel id="static-1">
             <ng-template ngbPanelTitle>

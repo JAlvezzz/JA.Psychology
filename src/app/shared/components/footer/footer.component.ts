@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -19,9 +20,13 @@ export class FooterComponent implements OnInit {
   public facebookIcon = faFacebookSquare;
   public instagramIcon = faInstagram;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  goToPrivacyPolicyPage() {
+    this.router.navigate(['servicos']);
   }
 
 }

@@ -21,32 +21,47 @@
         <div class="col-md-6">
             <div *ngFor="let contact of teamContacts">
                 <div class="col-md-12 py-4">
-                    <span class="bold">{{contact.fullName}}</span>
+                    <span class="contact-title bold">{{contact.fullName}}</span>
                 </div>
                 <div class="col-md-12 pb-3">
-                    <fa-icon class="mr-3 primary-color" [icon]="phoneIcon"></fa-icon><span>{{contact.phone}}</span>
+                    <fa-icon class="mr-3 primary-color" [icon]="phoneIcon"></fa-icon><span class="contact-info">{{contact.phone}}</span>
                 </div>
                 <div class="col-md-12 pb-3">
-                    <fa-icon class="mr-3 primary-color" [icon]="mailIcon"></fa-icon><span>{{contact.email}}</span>
+                    <fa-icon class="mr-3 primary-color" [icon]="mailIcon"></fa-icon><span class="contact-info">{{contact.email}}</span>
                 </div>
             </div>
         </div>
 
         <div class="col-md-6">
             <div class="col-md-12 py-4">
-                <span class="bold">Morada</span>
+                <span class="contact-title bold">Morada</span>
             </div>
             <div class="col-md-12 pb-3">
-                <span>Avenida do Pomar 188</span>
+                <span class="contact-info">Avenida do Pomar 188</span>
+            </div>
+            <div class="col-md-12 pb-4">
+                <span class="contact-info">1000-123 Lisboa</span>
             </div>
             <div class="col-md-12 pb-3">
-                <span>1000-123 Lisboa</span>
+                <fa-icon class="mr-3 primary-color" [icon]="phoneIcon"></fa-icon><span class="contact-info">912 345 678</span>
             </div>
+            <div class="col-md-12 pb-5">
+                <fa-icon class="mr-3 primary-color" [icon]="mailIcon"></fa-icon><span class="contact-info">email@email.com</span>
+            </div>
+
+            <div class="col-md-12 pb-3">
+                <span class="contact-title bold">Horário de funcionamento</span>
+            </div>
+            <div class="col-md-12 pb-3">
+                <span class="contact-info">Seg a Sex: 9:00 - 22:00</span>
+            </div>
+            <div class="col-md-12 pb-3">
+                <span class="contact-info">Sábados: 9:00 - 12:00</span>
+            </div>
+
         </div>
 
     </div>
-
-    <!-- ngFor para os membros da equipa com o nº tlm, email e redes sociais.. -->
 
 </div>
 

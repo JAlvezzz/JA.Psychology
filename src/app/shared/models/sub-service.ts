@@ -3,4 +3,5 @@ export class SubService {
     serviceNameIdentifier: string;
     title: string;
     description: string;
+    paragraphs: string[];
 }

@@ -13,18 +13,3 @@
     background-position: center center;
     background-size: cover;
 }
-
-.carousel-item {
-    display: block !important;
-    position: absolute;
-    transform: translateY(100%);
-    opacity: 1;
-    transition:all  1s;
-  }
-  
-.carousel-item.active {
-    position: relative;
-    transform: translateY(0);
-    opacity: 1;
-    top: 0;
-  }

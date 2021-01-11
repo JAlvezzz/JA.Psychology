@@ -5,10 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PagesRoutingModule } from './pages-routing.module';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
-    PagesComponent
+    PagesComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     FormsModule,

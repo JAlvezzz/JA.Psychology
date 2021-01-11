@@ -7,7 +7,7 @@
         
         <div class="row justify-content-md-center">
 
-            <div *ngFor="let service of services" class="col-lg-4 service-card">
+            <div *ngFor="let service of services" class="col-lg-4 service-card cursor-pointer" (click)="details(service.nameIdentifier)">
                 <div class="text-center">
                     <fa-icon [icon]="service.icon" size="3x"></fa-icon>
                     <p class="service-title mt-3">{{service.title}}</p>
