@@ -1,0 +1,66 @@
+<div class="container main-container">
+
+    <h2 class="title mb-5">Contactos</h2>
+
+    <div class="row col-md-12 pb-4">
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1556.3371972569307!2d-9.151115991845161!3d38.725283944899424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd193377211636cf%3A0x3c53c13836a13de4!2sPra%C3%A7a%20Marqu%C3%AAs%20de%20Pombal%2C%20Lisboa!5e0!3m2!1spt-PT!2spt!4v1609966120705!5m2!1spt-PT!2spt" 
+                width="100%" 
+                height="450" 
+                frameborder="0" 
+                style="border:0;" 
+                allowfullscreen="" 
+                aria-hidden="false" 
+                tabindex="0">
+        </iframe>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <div *ngFor="let contact of teamContacts">
+                <div class="col-md-12 py-4">
+                    <span class="contact-title bold">{{contact.fullName}}</span>
+                </div>
+                <div class="col-md-12 pb-3">
+                    <fa-icon class="mr-3 primary-color" [icon]="phoneIcon"></fa-icon><span class="contact-info">{{contact.phone}}</span>
+                </div>
+                <div class="col-md-12 pb-3">
+                    <fa-icon class="mr-3 primary-color" [icon]="mailIcon"></fa-icon><span class="contact-info">{{contact.email}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="col-md-12 py-4">
+                <span class="contact-title bold">Morada</span>
+            </div>
+            <div class="col-md-12 pb-3">
+                <span class="contact-info">Avenida do Pomar 188</span>
+            </div>
+            <div class="col-md-12 pb-4">
+                <span class="contact-info">1000-123 Lisboa</span>
+            </div>
+            <div class="col-md-12 pb-3">
+                <fa-icon class="mr-3 primary-color" [icon]="phoneIcon"></fa-icon><span class="contact-info">912 345 678</span>
+            </div>
+            <div class="col-md-12 pb-5">
+                <fa-icon class="mr-3 primary-color" [icon]="mailIcon"></fa-icon><span class="contact-info">email@email.com</span>
+            </div>
+
+            <div class="col-md-12 pb-3">
+                <span class="contact-title bold">Horário de funcionamento</span>
+            </div>
+            <div class="col-md-12 pb-3">
+                <span class="contact-info">Seg a Sex: 9:00 - 22:00</span>
+            </div>
+            <div class="col-md-12 pb-3">
+                <span class="contact-info">Sábados: 9:00 - 12:00</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+

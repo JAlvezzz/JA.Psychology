@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Blog } from 'src/app/shared/models/blog';
 import { faCalendarAlt, faUser } from '@fortawesome/free-solid-svg-icons';
 
-import { AngularFireDatabase } from '@angular/fire/database';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+// import { AngularFireDatabase } from '@angular/fire/database';
+// import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-blog',
@@ -15,10 +15,10 @@ export class BlogComponent implements OnInit {
   calendarIcon = faCalendarAlt;
   userIcon = faUser;
 
-  public blogsCollection: AngularFirestoreCollection<Blog>;
+  // public blogsCollection: AngularFirestoreCollection<Blog>;
   public items: Blog[];
 
-  constructor(private df: AngularFirestore) { }
+  // constructor(private df: AngularFirestore) { }
 
   ngOnInit(): void {
     // debugger;
