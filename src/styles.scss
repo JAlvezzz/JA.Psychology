@@ -14,6 +14,7 @@
 
 * {
     font-family: 'Mukta', sans-serif;
+    // line-height: 1.5rem;
 }
 
 body {
@@ -22,11 +23,11 @@ body {
 
 .title {
     color: $primary-color;
-    font-size: 2.75rem;
+    font-size: 2.25rem;
 }
 
 .subtitle {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
 }
 
 .main-container {
@@ -61,4 +62,8 @@ body {
 
 .primary-color {
     color: $primary-color;
+}
+
+.list-item {
+    list-style-type: square;
 }

@@ -4,6 +4,7 @@ import { Observable, of } from 'rxjs';
 import { Intervention } from '../models/intervention';
 import { SubIntervention } from '../models/sub-intervention';
 import { Service } from '../models/service';
+import { Faq } from '../models/faq';
 import { SubService } from '../models/sub-service';
 
 @Injectable({
@@ -212,6 +213,52 @@ export class GeneralService {
     }
   ];
 
+  private faqs: Faq[] = [
+    {
+      id: 'dogs',
+      title: 'Who let the dogs out?',
+      content: 'Bacon ipsum dolor amet filet mignon kevin cow short loin, beef pork ball tip turducken pastrami tail fatback pork loin short ribs jerky. Pork loin ball tip bacon turducken porchetta tri-tip.',
+      active: true
+    },
+    {
+      id: 'cats',
+      title: 'Who let the cats out?',
+      content: 'Bacon ipsum dolor amet filet mignon kevin cow short loin, beef pork ball tip turducken pastrami tail fatback pork loin short ribs jerky. Pork loin ball tip bacon turducken porchetta tri-tip.',
+      active: true
+    },
+    {
+      id: 'giraffes',
+      title: 'Who let the giraffes out?',
+      content: 'Bacon ipsum dolor amet filet mignon kevin cow short loin, beef pork ball tip turducken pastrami tail fatback pork loin short ribs jerky. Pork loin ball tip bacon turducken porchetta tri-tip.',
+      active: false
+    },
+    {
+      id: 'aligators',
+      title: 'Who let the aligators out?',
+      content: 'Bacon ipsum dolor amet filet mignon kevin cow short loin, beef pork ball tip turducken pastrami tail fatback pork loin short ribs jerky. Pork loin ball tip bacon turducken porchetta tri-tip.',
+      active: false
+    },
+    {
+      id: 'snakes',
+      title: 'Who let the snakes out?',
+      content: 'Bacon ipsum dolor amet filet mignon kevin cow short loin, beef pork ball tip turducken pastrami tail fatback pork loin short ribs jerky. Pork loin ball tip bacon turducken porchetta tri-tip.',
+      active: false
+    },
+    {
+      id: 'dolphins',
+      title: 'Who let the dolphins out?',
+      content: 'Bacon ipsum dolor amet filet mignon kevin cow short loin, beef pork ball tip turducken pastrami tail fatback pork loin short ribs jerky. Pork loin ball tip bacon turducken porchetta tri-tip.',
+      active: false
+    },
+    {
+      id: 'parrots',
+      title: 'Who let the parrots out?',
+      content: 'Bacon ipsum dolor amet filet mignon kevin cow short loin, beef pork ball tip turducken pastrami tail fatback pork loin short ribs jerky. Pork loin ball tip bacon turducken porchetta tri-tip.',
+      active: false
+    }
+  ];
+
+
   // TEAM
   public getTeamMembers(): TeamMember[] {
     return this.teamMembers.map(x => ({ id: x.id, nameIdentifier: x.nameIdentifier, fullName: x.fullName, role: x.role } as TeamMember));
@@ -242,6 +289,11 @@ export class GeneralService {
   // CONTACTS
   public getTeamMemberContacts(): TeamMember[] {
     return this.teamMembers.map(x => ({ id: x.id, fullName: x.fullName, role: x.role, phone: x.phone, email: x.email } as TeamMember));
+  }
+
+  //FAQS
+  public getFaqs(): Faq[] {
+    return this.faqs.map(x => ({ id: x.id, title: x.title, content: x.content, active: x.active } as Faq));
   }
 
 }

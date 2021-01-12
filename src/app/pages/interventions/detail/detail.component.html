@@ -14,15 +14,16 @@
             <div class="row">
 
                 <div class="col-lg-6">
-                    Prós
-                    <ul>
+
+                    <div class="row col-lg-12 justify-content-lg-center pb-5"><fa-icon class="primary-color" [icon]="warningIcon" size="3x"></fa-icon></div>
+                    <ul class="list-item">
                         <li *ngFor="let bullet1 of sub.bulletPoints1">{{bullet1}}</li>
                     </ul>
                 </div>
                 
                 <div class="col-lg-6">
-                    Contras
-                    <ul>
+                    <div class="row col-lg-12 justify-content-lg-center pb-5"><fa-icon class="primary-color" [icon]="coolIcon" size="3x"></fa-icon></div>
+                    <ul class="list-item">
                         <li *ngFor="let bullet2 of sub.bulletPoints2">{{bullet2}}</li>
                     </ul>
                 </div>

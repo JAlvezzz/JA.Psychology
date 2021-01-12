@@ -1,47 +1,32 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+  <a class="navbar-brand" href="#">
+    <img class="custom-logo" src="assets/img/logo.png" />
+  </a>
+
+  <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed">
+    &#9776;
+  </button>
+
+  <div [ngbCollapse]="isCollapsed" class="collapse navbar-collapse">
+    <ul class="navbar-nav">
       <div class="navbar-nav" *ngFor="let menuItem of menuItems">
-        <a class="nav-item nav-link" [routerLink]="menuItem.route">{{'MENU.' + menuItem.title | uppercase | translate}}</a>
-      </div>
-    </div>
-</nav> -->
-
-<nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#">LOGO</a>
-    <!-- <div>
-        <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarControls" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </div> -->
-    <div class="collapse navbar-collapse" [ngbCollapse]="isCollapsed">
-        <ul class="nav navbar-nav">
-          <div class="navbar-nav" *ngFor="let menuItem of menuItems">
-            <!-- <a class="nav-item nav-link" [routerLink]="menuItem.route">{{'MENU.' + menuItem.title | uppercase | translate}}</a> -->
-
-            <!-- <a class="nav-item nav-link" (click)="scrollTo('about')">{{'MENU.' + menuItem.title | uppercase | translate}}</a> -->
-
-            <div *ngIf="menuItem.route != null">
-              <a class="nav-item nav-link" [routerLink]="menuItem.route">{{'MENU.' + menuItem.title | uppercase | translate}}</a>
+        <div *ngIf="menuItem.route != null">
+          <a class="nav-item nav-link" [routerLink]="menuItem.route" (click)="isCollapsed = true">{{'MENU.' + menuItem.title | uppercase | translate}}</a>
+        </div>
+        <div *ngIf="menuItem.subMenus != null">
+          <div ngbDropdown>
+            <a class="nav-item nav-link dropdown-toggle" id="nav-dropdown" ngbDropdownToggle>
+                {{'MENU.' + menuItem.title | uppercase | translate}}
+            </a>
+            <div ngbDropdownMenu aria-labelledby="nav-dropdown">
+              <li class="nav-item nav-sub-item" *ngFor="let subMenuItem of menuItem.subMenus" routerLinkActive="active">
+                  <a class="nav-link" [routerLink]="subMenuItem.route">{{'MENU.' + subMenuItem.title | uppercase | translate}}</a>
+              </li>
             </div>
-            <div *ngIf="menuItem.subMenus != null">
-                <div ngbDropdown>
-                    <a class="nav-item nav-link dropdown-toggle" id="nav-dropdown" ngbDropdownToggle>
-                        {{'MENU.' + menuItem.title | uppercase | translate}}
-                    </a>
-                    <div ngbDropdownMenu aria-labelledby="nav-dropdown">
-                        <li class="nav-item nav-sub-item" *ngFor="let subMenuItem of menuItem.subMenus" routerLinkActive="active">
-                            <a class="nav-link" [routerLink]="subMenuItem.route">{{'MENU.' + subMenuItem.title | uppercase | translate}}</a>
-                        </li>
-                    </div>
-                </div>
-            </div>
+          </div>
+        </div>
+      </div> 
+    </ul>
+  </div>
 
-          </div>        
-        </ul>
-    </div>   
-  </nav>
-  
+</nav>

@@ -1,5 +1,11 @@
+@import "vars.scss";
+
+.custom-logo {
+    max-height: 75px;
+}
+
 .navbar {
-    height: 75px;
+    height: 100px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -17,10 +23,15 @@
 
 .nav-item:hover {
     // margin: 0rem 0.8rem;
-    background-color: #fcf9eb;
+    // background-color: #fcf9eb;
+    // color: $primary-color;
 }
 
 .nav-link {
     font-weight: bold;
     font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    color: $primary-color !important;
 }

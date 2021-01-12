@@ -1,104 +1,33 @@
 <div class="container main-container">
 
-    <section>
+  <section>
 
-        <h2 class="title mb-4">Intervenções</h2>
-        <div class="subtitle mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In condimentum metus at arcu facilisis viverra in imperdiet elit. Integer in ultrices neque, ac auctor libero</div>
-        
-        <div class="row text-center">
-          <div *ngFor="let inter of interventions" class="col-lg-4">
-            <div class="card-area">
-              <img src="assets/img/card_image.jpg" class="card-area-photo" />
+    <h2 class="title mb-4">Intervenções</h2>
+    <div class="subtitle mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In condimentum metus at arcu facilisis viverra in imperdiet elit. Integer in ultrices neque, ac auctor libero</div>
+    
+    <div class="row text-center">
+
+      <div *ngFor="let inter of interventions" class="col-lg-4">
+        <div class="card-area">
+          <div class="card-area-background" [ngStyle]="{ 'background-image': 'url(assets/img/card_image.jpg)' }">
+            <div class="card-area-overlay">
               <div class="card-area-content">
-                <p>{{inter.title}}</p>
-                <button class="btn btn-primary-color" (click)="details(inter.nameIdentifier)">Mais</button>
+                <div class="card-area-default">
+                  <div class="card-area-default-content">
+                    <span>{{inter.title}}</span>
+                  </div>
+                </div>
+                <div class="card-area-button-content">
+                  <button class="btn btn-primary-color" (click)="details(inter.nameIdentifier)">Mais</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- <div class="row">
-          <div class="col-lg-3">
-            <div class="card-area">
-              <img src="assets/img/card_image.jpg" class="card-area-photo" />
-              <div class="card-area-content">
-                <p>Lorem ipsum 111</p>
-                <button class="btn btn-primary" (click)="details(1)">Mais</button>
-              </div>
-            </div>
-          </div>
-    
-          <div class="col-lg-3">
-            <div class="card-area">
-              <img src="assets/img/card_image.jpg" class="card-area-photo" />
-              <div class="card-area-content">
-                <p>Lorem ipsum 222</p>
-                <button class="btn btn-primary">Mais</button>
-              </div>
-            </div>
-          </div>
-    
-          <div class="col-lg-3">
-            <div class="card-area">
-              <img src="assets/img/card_image.jpg" class="card-area-photo" />
-              <div class="card-area-content">
-                <p>Lorem ipsum 333</p>
-                <button class="btn btn-primary">Mais</button>
-              </div>
-            </div>
-          </div>
-    
-          <div class="col-lg-3">
-            <div class="card-area">
-              <img src="assets/img/card_image.jpg" class="card-area-photo" />
-              <div class="card-area-content">
-                <p>Lorem ipsum 444</p>
-                <button class="btn btn-primary">Mais</button>
-              </div>
-            </div>
-          </div>
-    
-          <div class="col-lg-3">
-            <div class="card-area">
-              <img src="assets/img/card_image.jpg" class="card-area-photo" />
-              <div class="card-area-content">
-                <p>Lorem ipsum 555</p>
-                <button class="btn btn-primary">Mais</button>
-              </div>
-            </div>
-          </div>
-    
-          <div class="col-lg-3">
-            <div class="card-area">
-              <img src="assets/img/card_image.jpg" class="card-area-photo" />
-              <div class="card-area-content">
-                <p>Lorem ipsum 666</p>
-                <button class="btn btn-primary">Mais</button>
-              </div>
-            </div>
-          </div>
-    
-          <div class="col-lg-3">
-            <div class="card-area">
-              <img src="assets/img/card_image.jpg" class="card-area-photo" />
-              <div class="card-area-content">
-                <p>Lorem ipsum 777</p>
-                <button class="btn btn-primary">Mais</button>
-              </div>
-            </div>
-          </div>
-    
-          <div class="col-lg-3">
-            <div class="card-area">
-              <img src="assets/img/card_image.jpg" class="card-area-photo" />
-              <div class="card-area-content">
-                <p>Lorem ipsum 888</p>
-                <button class="btn btn-primary">Mais</button>
-              </div>
-            </div>
-          </div>
-        </div> -->
-    
-      </section>
+    </div>
+
+  </section>
 
 </div>

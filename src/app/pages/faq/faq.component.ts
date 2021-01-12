@@ -1,33 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Faq } from 'src/app/shared/models/faq';
+import { GeneralService } from 'src/app/shared/services/general.service';
 
 @Component({
   selector: 'app-faq',
   templateUrl: './faq.component.html',
-  styleUrls: ['./faq.component.scss'],
-  animations: [
-    trigger('smoothCollapse', [
-      state('initial', style({
-        height:'0',
-        overflow:'hidden',
-        opacity:'0'
-      })),
-      state('final', style({
-        overflow:'hidden',
-        opacity:'1'
-      })),
-      transition('initial=>final', animate('750ms')),
-      transition('final=>initial', animate('750ms'))
-    ]),
-  ]
+  styleUrls: ['./faq.component.scss']
 })
 export class FaqComponent implements OnInit {
 
-  public isCollapsed = false;
+  public faqs = new Array<Faq>();
+  public activeIds: string[] = [];
 
-  constructor() { }
+  constructor(private generalService: GeneralService) { }
 
   ngOnInit(): void {
+    this.faqs = this.generalService.getFaqs();
+    this.activeIds = this.faqs.filter(f => f.active).map(res => res.id);
   }
 
 }

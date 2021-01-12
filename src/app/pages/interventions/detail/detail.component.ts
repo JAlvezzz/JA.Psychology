@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SubIntervention } from 'src/app/shared/models/sub-intervention';
+import { faExclamationTriangle, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-detail',
@@ -8,6 +9,9 @@ import { SubIntervention } from 'src/app/shared/models/sub-intervention';
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
+
+  public warningIcon = faExclamationTriangle;
+  public coolIcon = faThumbsUp;
 
   public subInterventions = new Array<SubIntervention>();
 
